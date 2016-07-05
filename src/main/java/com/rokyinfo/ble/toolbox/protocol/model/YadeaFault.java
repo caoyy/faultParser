@@ -4,7 +4,6 @@ import com.rokyinfo.convert.RkFieldConverter;
 import com.rokyinfo.convert.exception.FieldConvertException;
 import com.rokyinfo.convert.exception.RkFieldException;
 import com.rokyinfo.convert.util.ByteConvert;
-import com.sun.tools.javac.util.ArrayUtils;
 
 /**
  * Created by caoyy on 16/6/24.
