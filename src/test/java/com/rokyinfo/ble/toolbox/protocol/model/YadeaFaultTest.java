@@ -13,9 +13,9 @@ public class YadeaFaultTest {
     @Test
     public void yadeaFaultBuildTest() throws Exception {
 
-        YadeaFault mYadeaFault = YadeaFault.build(new byte[]{(byte) 0xff,0,0,0,0,0,0,0,0,0});
+        YadeaFault mYadeaFault = YadeaFault.build(new byte[]{(byte) 0,0,0,0,0,9,0,0,0,0});
 
-        assertArrayEquals(new int[]{mYadeaFault.getElectric()},new int[]{1});
+        assertArrayEquals(new int[]{mYadeaFault.getPowerManager(), mYadeaFault.getConverter()},new int[]{1, 1});
 //        ...
 
     }
