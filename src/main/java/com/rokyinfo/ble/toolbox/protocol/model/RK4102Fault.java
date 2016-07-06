@@ -45,7 +45,7 @@ public class RK4102Fault {
     /**
      * 电机控制器/电机类:ECU通信异常  1：故障，0：无故障
      */
-    @RkField(position = 1, length = 1, bitPosition = 6, bitLength = 1)
+    @RkField(position = 1, length = 1, bitPosition = 7, bitLength = 1)
     private int ecuCommunication;
 
     /**
@@ -97,25 +97,41 @@ public class RK4102Fault {
     private int gsmSignalAnomaly;
 
     /**
-     * 其他:电源管理器故障  1：故障，0：无故障
-     */
-    @RkField(position = 5, length = 2, bitPosition = 0, bitLength = 1)
-    private int powerManagerFault;
-    /**
-     * 其他:DC异常  1：故障，0：无故障
-     */
-    @RkField(position = 5, length = 2, bitPosition = 1, bitLength = 1)
-    private int dcAnomaly;
-    /**
-     * 其他:喇叭故障  1：故障，0：无故障
-     */
-    @RkField(position = 5, length = 2, bitPosition = 2, bitLength = 1)
-    private int hornFault;
-    /**
      * 其他:RC异常  1：故障，0：无故障
      */
-    @RkField(position = 5, length = 2, bitPosition = 3, bitLength = 1)
+    @RkField(position = 5, length = 1, bitPosition = 3, bitLength = 1)
     private int rcAnomaly;
+
+    /**
+     * PCU故障:短路故障  1：故障，0：无故障
+     */
+    @RkField(position = 6, length = 1, bitPosition = 0, bitLength = 1)
+    private int shortCircuit;
+    /**
+     * PCU故障:硬件故障  1：故障，0：无故障
+     */
+    @RkField(position = 6, length = 1, bitPosition = 1, bitLength = 1)
+    private int hardwareFault;
+    /**
+     * PCU故障:DC使能控制  1：故障，0：无故障
+     */
+    @RkField(position = 6, length = 1, bitPosition = 2, bitLength = 1)
+    private int dcEnableControl;
+    /**
+     * PCU故障:DC输出过压  1：故障，0：无故障
+     */
+    @RkField(position = 6, length = 1, bitPosition = 3, bitLength = 1)
+    private int dcOutputOverVoltage;
+    /**
+     * PCU故障:DC输出欠压  1：故障，0：无故障
+     */
+    @RkField(position = 6, length = 1, bitPosition = 4, bitLength = 1)
+    private int dcOutputUnderVoltage;
+    /**
+     * PCU故障:电源管理通信故障  1：故障，0：无故障
+     */
+    @RkField(position = 6, length = 1, bitPosition = 7, bitLength = 1)
+    private int powerManagerCommunication;
 
     /**
      * 灯光断路故障:前左转  1：故障，0：无故障
@@ -172,7 +188,11 @@ public class RK4102Fault {
      */
     @RkField(position = 7, length = 2, bitPosition = 10, bitLength = 1)
     private int cbBackgroundLight3;
-
+    /**
+     * 灯光断路故障:喇叭故障  1：故障，0：无故障
+     */
+    @RkField(position = 7, length = 2, bitPosition = 11, bitLength = 1)
+    private int cbHornFault;
     /**
      * 灯光短路故障:前左转  1：故障，0：无故障
      */
@@ -228,6 +248,11 @@ public class RK4102Fault {
      */
     @RkField(position = 9, length = 2, bitPosition = 10, bitLength = 1)
     private int scBackgroundLight3;
+    /**
+     * 灯光短路故障:喇叭故障  1：故障，0：无故障
+     */
+    @RkField(position = 9, length = 2, bitPosition = 11, bitLength = 1)
+    private int scHornFault;
 
     public int getStatus() {
         return status;
@@ -365,36 +390,76 @@ public class RK4102Fault {
         this.gsmSignalAnomaly = gsmSignalAnomaly;
     }
 
-    public int getPowerManagerFault() {
-        return powerManagerFault;
-    }
-
-    public void setPowerManagerFault(int powerManagerFault) {
-        this.powerManagerFault = powerManagerFault;
-    }
-
-    public int getDcAnomaly() {
-        return dcAnomaly;
-    }
-
-    public void setDcAnomaly(int dcAnomaly) {
-        this.dcAnomaly = dcAnomaly;
-    }
-
-    public int getHornFault() {
-        return hornFault;
-    }
-
-    public void setHornFault(int hornFault) {
-        this.hornFault = hornFault;
-    }
-
     public int getRcAnomaly() {
         return rcAnomaly;
     }
 
     public void setRcAnomaly(int rcAnomaly) {
         this.rcAnomaly = rcAnomaly;
+    }
+
+    public int getShortCircuit() {
+        return shortCircuit;
+    }
+
+    public void setShortCircuit(int shortCircuit) {
+        this.shortCircuit = shortCircuit;
+    }
+
+    public int getHardwareFault() {
+        return hardwareFault;
+    }
+
+    public void setHardwareFault(int hardwareFault) {
+        this.hardwareFault = hardwareFault;
+    }
+
+    public int getDcEnableControl() {
+        return dcEnableControl;
+    }
+
+    public void setDcEnableControl(int dcEnableControl) {
+        this.dcEnableControl = dcEnableControl;
+    }
+
+    public int getDcOutputOverVoltage() {
+        return dcOutputOverVoltage;
+    }
+
+    public void setDcOutputOverVoltage(int dcOutputOverVoltage) {
+        this.dcOutputOverVoltage = dcOutputOverVoltage;
+    }
+
+    public int getDcOutputUnderVoltage() {
+        return dcOutputUnderVoltage;
+    }
+
+    public void setDcOutputUnderVoltage(int dcOutputUnderVoltage) {
+        this.dcOutputUnderVoltage = dcOutputUnderVoltage;
+    }
+
+    public int getPowerManagerCommunication() {
+        return powerManagerCommunication;
+    }
+
+    public void setPowerManagerCommunication(int powerManagerCommunication) {
+        this.powerManagerCommunication = powerManagerCommunication;
+    }
+
+    public int getCbHornFault() {
+        return cbHornFault;
+    }
+
+    public void setCbHornFault(int cbHornFault) {
+        this.cbHornFault = cbHornFault;
+    }
+
+    public int getScHornFault() {
+        return scHornFault;
+    }
+
+    public void setScHornFault(int scHornFault) {
+        this.scHornFault = scHornFault;
     }
 
     public int getCbFrontLeftTurn() {
@@ -593,10 +658,13 @@ public class RK4102Fault {
                 ", gpsCommunication=" + gpsCommunication +
                 ", gpsSignalAnomaly=" + gpsSignalAnomaly +
                 ", gsmSignalAnomaly=" + gsmSignalAnomaly +
-                ", powerManagerFault=" + powerManagerFault +
-                ", dcAnomaly=" + dcAnomaly +
-                ", hornFault=" + hornFault +
                 ", rcAnomaly=" + rcAnomaly +
+                ", shortCircuit=" + shortCircuit +
+                ", hardwareFault=" + hardwareFault +
+                ", dcEnableControl=" + dcEnableControl +
+                ", dcOutputOverVoltage=" + dcOutputOverVoltage +
+                ", dcOutputUnderVoltage=" + dcOutputUnderVoltage +
+                ", powerManagerCommunication=" + powerManagerCommunication +
                 ", cbFrontLeftTurn=" + cbFrontLeftTurn +
                 ", cbBackLeftTurn=" + cbBackLeftTurn +
                 ", cbFrontRightTurn=" + cbFrontRightTurn +
@@ -608,6 +676,7 @@ public class RK4102Fault {
                 ", cbBackgroundLight1=" + cbBackgroundLight1 +
                 ", cbBackgroundLight2=" + cbBackgroundLight2 +
                 ", cbBackgroundLight3=" + cbBackgroundLight3 +
+                ", cbHornFault=" + cbHornFault +
                 ", scFrontLeftTurn=" + scFrontLeftTurn +
                 ", scBackLeftTurn=" + scBackLeftTurn +
                 ", scFrontRightTurn=" + scFrontRightTurn +
@@ -619,6 +688,7 @@ public class RK4102Fault {
                 ", scBackgroundLight1=" + scBackgroundLight1 +
                 ", scBackgroundLight2=" + scBackgroundLight2 +
                 ", scBackgroundLight3=" + scBackgroundLight3 +
+                ", scHornFault=" + scHornFault +
                 '}';
     }
 }

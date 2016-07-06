@@ -214,12 +214,12 @@ public class YadeaFault {
         }else{
             yadeaFault.setBackRightTurn(1);
         }
-        if(rk4102Fault.getHornFault() == 0){
+        if(rk4102Fault.getCbHornFault() == 0 && rk4102Fault.getScHornFault() == 0){
             yadeaFault.setHorn(0);
         }else{
             yadeaFault.setHorn(1);
         }
-        if(rk4102Fault.getDcAnomaly() == 0){
+        if(rk4102Fault.getDcEnableControl() == 0 && rk4102Fault.getDcOutputOverVoltage() == 0 && rk4102Fault.getDcOutputUnderVoltage() == 0){
             yadeaFault.setConverter(0);
         }else{
             yadeaFault.setConverter(1);
@@ -271,7 +271,7 @@ public class YadeaFault {
         }else{
             yadeaFault.setBatteryCommunication(1);
         }
-        if(rk4102Fault.getPowerManagerFault() == 0){
+        if(rk4102Fault.getShortCircuit() == 0 && rk4102Fault.getHardwareFault() == 0 && rk4102Fault.getPowerManagerCommunication() == 0){
             yadeaFault.setPowerManager(0);
         }else{
             yadeaFault.setPowerManager(1);
