@@ -136,122 +136,122 @@ public class RK4102Fault {
     /**
      * 灯光断路故障:前左转  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 0, bitLength = 1)
+    @RkField(position = 7, length = 1, bitPosition = 0, bitLength = 1)
     private int cbFrontLeftTurn;
     /**
      * 灯光断路故障:后左转  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 1, bitLength = 1)
+    @RkField(position = 7, length = 1, bitPosition = 1, bitLength = 1)
     private int cbBackLeftTurn;
     /**
      * 灯光断路故障:前右转  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 2, bitLength = 1)
+    @RkField(position = 7, length = 1, bitPosition = 2, bitLength = 1)
     private int cbFrontRightTurn;
     /**
      * 灯光断路故障:后右转  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 3, bitLength = 1)
+    @RkField(position = 7, length = 1, bitPosition = 3, bitLength = 1)
     private int cbBackRightTurn;
     /**
      * 灯光断路故障:近光  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 4, bitLength = 1)
+    @RkField(position = 7, length = 1, bitPosition = 4, bitLength = 1)
     private int cbNearLight;
     /**
      * 灯光断路故障:远光  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 5, bitLength = 1)
+    @RkField(position = 7, length = 1, bitPosition = 5, bitLength = 1)
     private int cbBeam;
     /**
      * 灯光断路故障:尾灯  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 6, bitLength = 1)
+    @RkField(position = 7, length = 1, bitPosition = 6, bitLength = 1)
     private int cbTaillight;
     /**
      * 灯光断路故障:刹车灯  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 7, bitLength = 1)
+    @RkField(position = 7, length = 1, bitPosition = 7, bitLength = 1)
     private int cbBrakeLight;
     /**
      * 灯光断路故障:背景灯1  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 8, bitLength = 1)
+    @RkField(position = 8, length = 1, bitPosition = 0, bitLength = 1)
     private int cbBackgroundLight1;
     /**
      * 灯光断路故障:背景灯2  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 9, bitLength = 1)
+    @RkField(position = 8, length = 1, bitPosition = 1, bitLength = 1)
     private int cbBackgroundLight2;
     /**
      * 灯光断路故障:背景灯3  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 10, bitLength = 1)
+    @RkField(position = 8, length = 1, bitPosition = 2, bitLength = 1)
     private int cbBackgroundLight3;
     /**
      * 灯光断路故障:喇叭故障  1：故障，0：无故障
      */
-    @RkField(position = 7, length = 2, bitPosition = 11, bitLength = 1)
+    @RkField(position = 8, length = 1, bitPosition = 3, bitLength = 1)
     private int cbHornFault;
     /**
      * 灯光短路故障:前左转  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 0, bitLength = 1)
+    @RkField(position = 9, length = 1, bitPosition = 0, bitLength = 1)
     private int scFrontLeftTurn;
     /**
      * 灯光短路故障:后左转  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 1, bitLength = 1)
+    @RkField(position = 9, length = 1, bitPosition = 1, bitLength = 1)
     private int scBackLeftTurn;
     /**
      * 灯光短路故障:前右转  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 2, bitLength = 1)
+    @RkField(position = 9, length = 1, bitPosition = 2, bitLength = 1)
     private int scFrontRightTurn;
     /**
      * 灯光短路故障:后右转  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 3, bitLength = 1)
+    @RkField(position = 9, length = 1, bitPosition = 3, bitLength = 1)
     private int scBackRightTurn;
     /**
      * 灯光短路故障:近光  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 4, bitLength = 1)
+    @RkField(position = 9, length = 1, bitPosition = 4, bitLength = 1)
     private int scNearLight;
     /**
      * 灯光短路故障:远光  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 5, bitLength = 1)
+    @RkField(position = 9, length = 1, bitPosition = 5, bitLength = 1)
     private int scBeam;
     /**
      * 灯光短路故障:尾灯  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 6, bitLength = 1)
+    @RkField(position = 9, length = 1, bitPosition = 6, bitLength = 1)
     private int scTaillight;
     /**
      * 灯光短路故障:刹车灯  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 7, bitLength = 1)
+    @RkField(position = 9, length = 1, bitPosition = 7, bitLength = 1)
     private int scBrakeLight;
     /**
      * 灯光短路故障:背景灯1  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 8, bitLength = 1)
+    @RkField(position = 10, length = 1, bitPosition = 0, bitLength = 1)
     private int scBackgroundLight1;
     /**
      * 灯光短路故障:背景灯2  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 9, bitLength = 1)
+    @RkField(position = 10, length = 1, bitPosition = 1, bitLength = 1)
     private int scBackgroundLight2;
     /**
      * 灯光短路故障:背景灯3  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 10, bitLength = 1)
+    @RkField(position = 10, length = 1, bitPosition = 2, bitLength = 1)
     private int scBackgroundLight3;
     /**
      * 灯光短路故障:喇叭故障  1：故障，0：无故障
      */
-    @RkField(position = 9, length = 2, bitPosition = 11, bitLength = 1)
+    @RkField(position = 10, length = 1, bitPosition = 3, bitLength = 1)
     private int scHornFault;
 
     public int getStatus() {
