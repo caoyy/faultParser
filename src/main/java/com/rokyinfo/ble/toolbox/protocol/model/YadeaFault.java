@@ -159,9 +159,13 @@ public class YadeaFault {
 
         YadeaFault yadeaFault = new YadeaFault();
         yadeaFault.setStatus(rk4102Fault.getStatus());
-        yadeaFault.setElectric(rk4102Fault.getElectric());
         //1：故障，0：无故障
-        if(rk4102Fault.getMos() == 0 && rk4102Fault.getPhase() == 0 && rk4102Fault.getHall() == 0){
+        if(rk4102Fault.getElectric() == 0 && rk4102Fault.getHall() == 0){
+            yadeaFault.setElectric(0);
+        }else{
+            yadeaFault.setElectric(1);
+        }
+        if(rk4102Fault.getMos() == 0 && rk4102Fault.getPhase() == 0){
             yadeaFault.setController(0);
         }else{
             yadeaFault.setController(1);
