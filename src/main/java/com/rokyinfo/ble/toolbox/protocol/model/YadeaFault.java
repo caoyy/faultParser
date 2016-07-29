@@ -250,12 +250,12 @@ public class YadeaFault {
             yadeaFault.setBtCommunication(1);
             yadeaFault.setCenterControllerCommunication(1);
         }
-        if(rk4102Fault.getGpsCommunication() == 0 && rk4102Fault.getGpsSignalAnomaly() == 0){
+        if(rk4102Fault.getGpsCommunication() == 0){
             yadeaFault.setGpsCommunication(0);
         }else{
             yadeaFault.setGpsCommunication(1);
         }
-        if(rk4102Fault.getGsmSignalAnomaly() == 0 && rk4102Fault.getGpsCommunication() == 0){
+        if(rk4102Fault.getGsmSignalAnomaly() == 0){
             yadeaFault.setGsmNet(0);
         }else{
             yadeaFault.setGsmNet(1);
